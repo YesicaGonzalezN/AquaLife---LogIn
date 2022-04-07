@@ -1,0 +1,398 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+body {
+    background-image: linear-gradient(350deg, #befffb 0, #9bf1eb 25%, #6cd8d8 50%, #2abfc6 75%, #00acbb 100%);
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: #2abfc6;
+    box-shadow: 0 4px 25px -22px #000;
+    z-index: 2;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo a {
+    color: #fff;
+    font-size: 30px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.menu {
+    height: 60px;
+}
+
+.menu nav {
+    height: 100%;
+}
+
+.menu nav ul {
+    height: 100%;
+    display: flex;
+}
+
+.menu nav ul li {
+    height: 100%;
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.menu nav ul li a {
+    color: #fff;
+    transition: color 300ms;
+}
+
+.menu nav ul li a:hover {
+    color: rgb(145, 224, 255)
+}
+
+.menu .text-menu-selected {
+    color: hsl(0, 0%, 100%);
+}
+
+.container-all {
+    width: 90%;
+    max-width: 1200px;
+    padding: 100px;
+    align-items: center;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.banner_title {
+    width: 90%;
+}
+
+.banner_title h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-size: 70px;
+    font-weight: 80px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+.banner_title .text {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.banner_title .question {
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.banner_title .calcula {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    background: #00acbb;
+    padding: 20px;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+.banner_img {
+    animation: movimiento 2.5s linear infinite;
+    margin-left: 30%;
+}
+
+.banner_img img {
+    display: block;
+}
+
+.footer {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(6, 152, 250);
+    text-align: center;
+    width: 100%;
+    height: 50px;
+}
+
+.burbuja {
+    border-radius: 50%;
+    background: #fff;
+    opacity: .3;
+    position: absolute;
+    bottom: 0;
+    animation: burbujas 3s linear infinite;
+}
+
+.burbuja:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    z-index: 0;
+}
+
+.burbuja:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(3) {
+    width: 20px;
+    height: 20px;
+    left: 15%;
+    animation-duration: 1.5s;
+    animation-delay: 7s;
+}
+
+.burbuja:nth-child(4) {
+    width: 70px;
+    height: 70px;
+    left: 65%;
+    animation-duration: 3s;
+    animation-delay: 1s;
+}
+
+.burbuja:nth-child(5) {
+    width: 50px;
+    height: 50px;
+    left: 90%;
+    animation-duration: 6s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(6) {
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(7) {
+    width: 100px;
+    height: 100px;
+    left: 52%;
+    animation-duration: 4s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(8) {
+    width: 65px;
+    height: 65px;
+    left: 51%;
+    animation-duration: 5s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(9) {
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(10) {
+    width: 40px;
+    height: 40px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 4s;
+}
+
+@keyframes burbujas {
+    0% {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    30% {
+        transform: translateX(30px);
+    }
+
+    50% {
+        opacity: .4;
+    }
+
+    100% {
+        bottom: 100vh;
+        opacity: 0;
+    }
+
+}
+
+@keyframes movimiento {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(30px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+
+    .banner,
+    .banner_img {
+        max-width: 1000px;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .banner {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .banner {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+/* ----------------------- CSS PARA PAGINA DE REGISTRO.HTML------------------------------ */
+
+.body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    margin-top: 100px;
+}
+
+h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 2em;
+}
+
+.container-form {
+    width: min(30rem, 100%);
+}
+
+form {
+    background-color: #2ABFC6;
+    border-radius: 2rem;
+    box-shadow: 7px 13px 37px;
+    padding: 2rem;
+    margin-top: 30px;
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    color: rgb(250, 250, 250);
+    font-weight: 600;
+    margin-bottom: .5rem;
+    padding-left: 1rem;
+    font-size: 1.2em;
+    display: block;
+}
+
+.campo input {
+    background-color: rgba(255, 255, 255, 0.15);
+    width: 100%;
+    border: none;
+    border-radius: 2rem;
+    height: 2rem;
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+    outline: none;
+}
+
+input::placeholder {
+    color: #fff;
+    font-weight: 300;
+    padding-left: 1rem;
+}
+
+input:hover {
+    background-color: rgba(255, 255, 255, 0.308);
+}
+
+.boton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnPrincipal {
+    border: none;
+    width: 60%;
+    color: #ffffff;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    margin: 1.5rem 0 0 0;
+    height: 2.5rem;
+    background-color: rgb(18, 135, 151);
+}
+
+h3 {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+a {
+    color: #fff;
+}
+
+.btnPrincipal:hover {
+    cursor: pointer;
+    color: #00acbb;
+    background-color: #fff;
+}
+
+a:hover {
+    cursor: pointer;
+    color: rgb(18, 135, 151);
+    font-size: 1.3rem;
+}
